@@ -17,6 +17,7 @@ def parity(x):
     while x:
         result = result ^ 1
         x = x & (x - 1)
+    return result
 
 #O(n/L) time complexity with caching where n is the word size(For example 64 bits)
 #and L is the width of the key in bits (For example 16 bits)
