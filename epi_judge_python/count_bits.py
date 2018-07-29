@@ -1,8 +1,15 @@
 from test_framework import generic_test
 
 
+#O(n) Time, O(1) Space
 def count_bits(x):
-    return 0
+    numBits = 0
+
+    while x:
+        numBits = numBits + (x & 1)
+        x = x >> 1
+
+    return numBits
 
 
 if __name__ == '__main__':
